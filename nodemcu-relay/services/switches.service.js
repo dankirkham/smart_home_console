@@ -7,7 +7,7 @@ module.exports = {
 	name: "switches",
 	mixins: [HTTPClientService],
 	settings: {
-    httpClient: { includeMethods: ["get", "post"] }
+    httpClient: { includeMethods: ["get", "put"] }
   },
 	actions: {
 		list: {
@@ -28,7 +28,7 @@ module.exports = {
 			async handler (ctx) {
 				const {id, state} = ctx.params;
 
-				const response = await this.actions.post({
+				const response = await this.actions.put({
 					url: process.env.SMARTTHINGS_URL + "/switches/" + id + "/" + state,
 					opt: {
 						headers: {
