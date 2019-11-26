@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name Footprints)(type KiCad)(uri ${KIPRJMOD}/Footprints.pretty)(options "")(descr ""))
+  (lib (name HandheldGameFootprints)(type KiCad)(uri /Users/dan/Projects/HandheldGame/hardware/HandheldGame-v1/HandheldGameFootprints.pretty)(options "")(descr ""))
+  (lib (name Jumper)(type KiCad)(uri /Users/dan/Downloads/kicad-footprints-master/Jumper.pretty)(options "")(descr ""))
+)

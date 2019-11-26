@@ -1,0 +1,17 @@
+version: "3.2"
+
+services:
+  nodemcu-relay:
+    build:
+      context: .
+    env_file: docker-compose.env
+    environment:
+      SERVICES: api,switches
+      PORT: 4000
+    networks:
+      - internal
+    ports:
+      - "4000:4000"
+
+networks:
+  internal:

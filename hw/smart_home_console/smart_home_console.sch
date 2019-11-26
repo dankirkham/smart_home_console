@@ -1,0 +1,1724 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:NodeMCU U1
+U 1 1 5D803389
+P 9650 2000
+F 0 "U1" H 9650 2965 50  0000 C CNN
+F 1 "NodeMCU" H 9650 2874 50  0000 C CNN
+F 2 "Footprints:NodeMCUV2" H 9750 2500 50  0001 C CNN
+F 3 "" H 9750 2500 50  0001 C CNN
+	1    9650 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 5D8034B5
+P 8200 950
+F 0 "#PWR0101" H 8200 800 50  0001 C CNN
+F 1 "+3.3V" H 8215 1123 50  0000 C CNN
+F 2 "" H 8200 950 50  0001 C CNN
+F 3 "" H 8200 950 50  0001 C CNN
+	1    8200 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 2300 8200 2300
+Wire Wire Line
+	8200 2300 8200 950 
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5D8034E4
+P 10850 950
+F 0 "#PWR0102" H 10850 800 50  0001 C CNN
+F 1 "+3.3V" H 10865 1123 50  0000 C CNN
+F 2 "" H 10850 950 50  0001 C CNN
+F 3 "" H 10850 950 50  0001 C CNN
+	1    10850 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 950  10850 1800
+Wire Wire Line
+	10850 2700 10350 2700
+Wire Wire Line
+	10350 1800 10850 1800
+Connection ~ 10850 1800
+Wire Wire Line
+	10850 1800 10850 2700
+$Comp
+L power:GND #PWR0103
+U 1 1 5D80356F
+P 9650 3100
+F 0 "#PWR0103" H 9650 2850 50  0001 C CNN
+F 1 "GND" H 9655 2927 50  0000 C CNN
+F 2 "" H 9650 3100 50  0001 C CNN
+F 3 "" H 9650 3100 50  0001 C CNN
+	1    9650 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 2600 8350 2600
+Wire Wire Line
+	8350 2600 8350 3100
+Wire Wire Line
+	8350 3100 9050 3100
+Wire Wire Line
+	9650 3100 10650 3100
+Wire Wire Line
+	10650 3100 10650 2600
+Wire Wire Line
+	10650 2600 10350 2600
+Connection ~ 9650 3100
+Wire Wire Line
+	10650 2600 10650 1900
+Wire Wire Line
+	10650 1900 10350 1900
+Connection ~ 10650 2600
+$Comp
+L HandheldGameSymbols:1825910-6 SW1
+U 1 1 5D80381C
+P 1700 1550
+F 0 "SW1" V 1435 1100 50  0000 C CNN
+F 1 "1825910-6" V 1526 1100 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 1500 1550 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 1500 1550 50  0001 C CNN
+	1    1700 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D1
+U 1 1 5D803DB2
+P 1700 2300
+F 0 "D1" V 1746 2221 50  0000 R CNN
+F 1 "1N4148" V 1655 2221 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1700 2125 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 1700 2300 50  0001 C CNN
+	1    1700 2300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	800  1950 800  2150
+Wire Wire Line
+	800  2150 1700 2150
+Wire Wire Line
+	1700 1950 1700 2150
+Connection ~ 1700 2150
+Text Label 600  2450 0    50   ~ 0
+ROW0
+Wire Wire Line
+	600  2450 1700 2450
+$Comp
+L Device:R R1
+U 1 1 5D804777
+P 1700 950
+F 0 "R1" H 1770 996 50  0000 L CNN
+F 1 "1.8k" H 1770 905 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1630 950 50  0001 C CNN
+F 3 "~" H 1700 950 50  0001 C CNN
+	1    1700 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 5D8047BB
+P 1700 750
+F 0 "#PWR0104" H 1700 600 50  0001 C CNN
+F 1 "+3.3V" H 1715 923 50  0000 C CNN
+F 2 "" H 1700 750 50  0001 C CNN
+F 3 "" H 1700 750 50  0001 C CNN
+	1    1700 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 750  1700 800 
+Wire Wire Line
+	800  1550 800  1200
+Wire Wire Line
+	800  1200 1700 1200
+Wire Wire Line
+	1700 1200 1700 1550
+Text Label 2050 1200 0    50   ~ 0
+COL0
+Wire Wire Line
+	1700 1200 1700 1100
+Connection ~ 1700 1200
+$Comp
+L HandheldGameSymbols:1825910-6 SW2
+U 1 1 5D80A081
+P 1700 2900
+F 0 "SW2" V 1435 2450 50  0000 C CNN
+F 1 "1825910-6" V 1526 2450 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 1500 2900 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 1500 2900 50  0001 C CNN
+	1    1700 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D2
+U 1 1 5D80A088
+P 1700 3650
+F 0 "D2" V 1746 3571 50  0000 R CNN
+F 1 "1N4148" V 1655 3571 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1700 3475 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 1700 3650 50  0001 C CNN
+	1    1700 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	800  3300 800  3500
+Wire Wire Line
+	800  3500 1700 3500
+Wire Wire Line
+	1700 3300 1700 3500
+Connection ~ 1700 3500
+Text Label 600  3800 0    50   ~ 0
+ROW1
+Wire Wire Line
+	600  3800 1700 3800
+Wire Wire Line
+	800  2900 800  2550
+Wire Wire Line
+	800  2550 1700 2550
+Wire Wire Line
+	1700 2550 1700 2900
+Connection ~ 1700 2550
+$Comp
+L HandheldGameSymbols:1825910-6 SW3
+U 1 1 5D80B073
+P 1700 4250
+F 0 "SW3" V 1435 3800 50  0000 C CNN
+F 1 "1825910-6" V 1526 3800 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 1500 4250 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 1500 4250 50  0001 C CNN
+	1    1700 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D3
+U 1 1 5D80B07A
+P 1700 5000
+F 0 "D3" V 1746 4921 50  0000 R CNN
+F 1 "1N4148" V 1655 4921 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1700 4825 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 1700 5000 50  0001 C CNN
+	1    1700 5000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	800  4650 800  4850
+Wire Wire Line
+	800  4850 1700 4850
+Wire Wire Line
+	1700 4650 1700 4850
+Connection ~ 1700 4850
+Text Label 600  5150 0    50   ~ 0
+ROW2
+Wire Wire Line
+	600  5150 1700 5150
+Wire Wire Line
+	800  4250 800  3900
+Wire Wire Line
+	800  3900 1700 3900
+Wire Wire Line
+	1700 3900 1700 4250
+Connection ~ 1700 3900
+$Comp
+L HandheldGameSymbols:1825910-6 SW4
+U 1 1 5D80B7FD
+P 1700 5600
+F 0 "SW4" V 1435 5150 50  0000 C CNN
+F 1 "1825910-6" V 1526 5150 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 1500 5600 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 1500 5600 50  0001 C CNN
+	1    1700 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D4
+U 1 1 5D80B804
+P 1700 6350
+F 0 "D4" V 1746 6271 50  0000 R CNN
+F 1 "1N4148" V 1655 6271 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1700 6175 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 1700 6350 50  0001 C CNN
+	1    1700 6350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	800  6000 800  6200
+Wire Wire Line
+	800  6200 1700 6200
+Wire Wire Line
+	1700 6000 1700 6200
+Connection ~ 1700 6200
+Text Label 600  6500 0    50   ~ 0
+ROW3
+Wire Wire Line
+	600  6500 1700 6500
+Wire Wire Line
+	800  5600 800  5250
+Wire Wire Line
+	800  5250 1700 5250
+Wire Wire Line
+	1700 5250 1700 5600
+Connection ~ 1700 5250
+Wire Wire Line
+	2100 1200 2100 2550
+Wire Wire Line
+	1700 1200 2100 1200
+Wire Wire Line
+	1700 2550 2100 2550
+Wire Wire Line
+	2100 3900 2100 2550
+Wire Wire Line
+	1700 3900 2100 3900
+Connection ~ 2100 2550
+Wire Wire Line
+	2100 3900 2100 5250
+Wire Wire Line
+	1700 5250 2100 5250
+Connection ~ 2100 3900
+$Comp
+L HandheldGameSymbols:1825910-6 SW5
+U 1 1 5D80FE2C
+P 3300 1550
+F 0 "SW5" V 3035 1100 50  0000 C CNN
+F 1 "1825910-6" V 3126 1100 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 3100 1550 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 3100 1550 50  0001 C CNN
+	1    3300 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D5
+U 1 1 5D80FE33
+P 3300 2300
+F 0 "D5" V 3346 2221 50  0000 R CNN
+F 1 "1N4148" V 3255 2221 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3300 2125 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 3300 2300 50  0001 C CNN
+	1    3300 2300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 1950 2400 2150
+Wire Wire Line
+	2400 2150 3300 2150
+Wire Wire Line
+	3300 1950 3300 2150
+Connection ~ 3300 2150
+Text Label 2200 2450 0    50   ~ 0
+ROW0
+Wire Wire Line
+	2200 2450 3300 2450
+$Comp
+L Device:R R2
+U 1 1 5D80FE40
+P 3300 950
+F 0 "R2" H 3370 996 50  0000 L CNN
+F 1 "1.8k" H 3370 905 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3230 950 50  0001 C CNN
+F 3 "~" H 3300 950 50  0001 C CNN
+	1    3300 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5D80FE47
+P 3300 750
+F 0 "#PWR0105" H 3300 600 50  0001 C CNN
+F 1 "+3.3V" H 3315 923 50  0000 C CNN
+F 2 "" H 3300 750 50  0001 C CNN
+F 3 "" H 3300 750 50  0001 C CNN
+	1    3300 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 750  3300 800 
+Wire Wire Line
+	2400 1550 2400 1200
+Wire Wire Line
+	2400 1200 3300 1200
+Wire Wire Line
+	3300 1200 3300 1550
+Text Label 3650 1200 0    50   ~ 0
+COL1
+Wire Wire Line
+	3300 1200 3300 1100
+Connection ~ 3300 1200
+$Comp
+L HandheldGameSymbols:1825910-6 SW6
+U 1 1 5D80FE54
+P 3300 2900
+F 0 "SW6" V 3035 2450 50  0000 C CNN
+F 1 "1825910-6" V 3126 2450 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 3100 2900 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 3100 2900 50  0001 C CNN
+	1    3300 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D6
+U 1 1 5D80FE5B
+P 3300 3650
+F 0 "D6" V 3346 3571 50  0000 R CNN
+F 1 "1N4148" V 3255 3571 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3300 3475 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 3300 3650 50  0001 C CNN
+	1    3300 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 3300 2400 3500
+Wire Wire Line
+	2400 3500 3300 3500
+Wire Wire Line
+	3300 3300 3300 3500
+Connection ~ 3300 3500
+Text Label 2200 3800 0    50   ~ 0
+ROW1
+Wire Wire Line
+	2200 3800 3300 3800
+Wire Wire Line
+	2400 2900 2400 2550
+Wire Wire Line
+	2400 2550 3300 2550
+Wire Wire Line
+	3300 2550 3300 2900
+Connection ~ 3300 2550
+$Comp
+L HandheldGameSymbols:1825910-6 SW7
+U 1 1 5D80FE6C
+P 3300 4250
+F 0 "SW7" V 3035 3800 50  0000 C CNN
+F 1 "1825910-6" V 3126 3800 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 3100 4250 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 3100 4250 50  0001 C CNN
+	1    3300 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D7
+U 1 1 5D80FE73
+P 3300 5000
+F 0 "D7" V 3346 4921 50  0000 R CNN
+F 1 "1N4148" V 3255 4921 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3300 4825 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 3300 5000 50  0001 C CNN
+	1    3300 5000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 4650 2400 4850
+Wire Wire Line
+	2400 4850 3300 4850
+Wire Wire Line
+	3300 4650 3300 4850
+Connection ~ 3300 4850
+Text Label 2200 5150 0    50   ~ 0
+ROW2
+Wire Wire Line
+	2200 5150 3300 5150
+Wire Wire Line
+	2400 4250 2400 3900
+Wire Wire Line
+	2400 3900 3300 3900
+Wire Wire Line
+	3300 3900 3300 4250
+Connection ~ 3300 3900
+$Comp
+L HandheldGameSymbols:1825910-6 SW8
+U 1 1 5D80FE84
+P 3300 5600
+F 0 "SW8" V 3035 5150 50  0000 C CNN
+F 1 "1825910-6" V 3126 5150 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 3100 5600 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 3100 5600 50  0001 C CNN
+	1    3300 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D8
+U 1 1 5D80FE8B
+P 3300 6350
+F 0 "D8" V 3346 6271 50  0000 R CNN
+F 1 "1N4148" V 3255 6271 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3300 6175 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 3300 6350 50  0001 C CNN
+	1    3300 6350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 6000 2400 6200
+Wire Wire Line
+	2400 6200 3300 6200
+Wire Wire Line
+	3300 6000 3300 6200
+Connection ~ 3300 6200
+Text Label 2200 6500 0    50   ~ 0
+ROW3
+Wire Wire Line
+	2200 6500 3300 6500
+Wire Wire Line
+	2400 5600 2400 5250
+Wire Wire Line
+	2400 5250 3300 5250
+Wire Wire Line
+	3300 5250 3300 5600
+Connection ~ 3300 5250
+Wire Wire Line
+	3700 1200 3700 2550
+Wire Wire Line
+	3300 1200 3700 1200
+Wire Wire Line
+	3300 2550 3700 2550
+Wire Wire Line
+	3700 3900 3700 2550
+Wire Wire Line
+	3300 3900 3700 3900
+Connection ~ 3700 2550
+Wire Wire Line
+	3700 3900 3700 5250
+Wire Wire Line
+	3300 5250 3700 5250
+Connection ~ 3700 3900
+$Comp
+L HandheldGameSymbols:1825910-6 SW9
+U 1 1 5D811D8F
+P 4900 1550
+F 0 "SW9" V 4635 1100 50  0000 C CNN
+F 1 "1825910-6" V 4726 1100 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 4700 1550 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 4700 1550 50  0001 C CNN
+	1    4900 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D9
+U 1 1 5D811D96
+P 4900 2300
+F 0 "D9" V 4946 2221 50  0000 R CNN
+F 1 "1N4148" V 4855 2221 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4900 2125 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 4900 2300 50  0001 C CNN
+	1    4900 2300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 1950 4000 2150
+Wire Wire Line
+	4000 2150 4900 2150
+Wire Wire Line
+	4900 1950 4900 2150
+Connection ~ 4900 2150
+Text Label 3800 2450 0    50   ~ 0
+ROW0
+Wire Wire Line
+	3800 2450 4900 2450
+$Comp
+L Device:R R3
+U 1 1 5D811DA3
+P 4900 950
+F 0 "R3" H 4970 996 50  0000 L CNN
+F 1 "1.8k" H 4970 905 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4830 950 50  0001 C CNN
+F 3 "~" H 4900 950 50  0001 C CNN
+	1    4900 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0106
+U 1 1 5D811DAA
+P 4900 750
+F 0 "#PWR0106" H 4900 600 50  0001 C CNN
+F 1 "+3.3V" H 4915 923 50  0000 C CNN
+F 2 "" H 4900 750 50  0001 C CNN
+F 3 "" H 4900 750 50  0001 C CNN
+	1    4900 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 750  4900 800 
+Wire Wire Line
+	4000 1550 4000 1200
+Wire Wire Line
+	4000 1200 4900 1200
+Wire Wire Line
+	4900 1200 4900 1550
+Text Label 5250 1200 0    50   ~ 0
+COL2
+Wire Wire Line
+	4900 1200 4900 1100
+Connection ~ 4900 1200
+$Comp
+L HandheldGameSymbols:1825910-6 SW10
+U 1 1 5D811DB7
+P 4900 2900
+F 0 "SW10" V 4635 2450 50  0000 C CNN
+F 1 "1825910-6" V 4726 2450 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 4700 2900 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 4700 2900 50  0001 C CNN
+	1    4900 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D10
+U 1 1 5D811DBE
+P 4900 3650
+F 0 "D10" V 4946 3571 50  0000 R CNN
+F 1 "1N4148" V 4855 3571 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4900 3475 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 4900 3650 50  0001 C CNN
+	1    4900 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 3300 4000 3500
+Wire Wire Line
+	4000 3500 4900 3500
+Wire Wire Line
+	4900 3300 4900 3500
+Connection ~ 4900 3500
+Text Label 3800 3800 0    50   ~ 0
+ROW1
+Wire Wire Line
+	3800 3800 4900 3800
+Wire Wire Line
+	4000 2900 4000 2550
+Wire Wire Line
+	4000 2550 4900 2550
+Wire Wire Line
+	4900 2550 4900 2900
+Connection ~ 4900 2550
+$Comp
+L HandheldGameSymbols:1825910-6 SW11
+U 1 1 5D811DCF
+P 4900 4250
+F 0 "SW11" V 4635 3800 50  0000 C CNN
+F 1 "1825910-6" V 4726 3800 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 4700 4250 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 4700 4250 50  0001 C CNN
+	1    4900 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D11
+U 1 1 5D811DD6
+P 4900 5000
+F 0 "D11" V 4946 4921 50  0000 R CNN
+F 1 "1N4148" V 4855 4921 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4900 4825 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 4900 5000 50  0001 C CNN
+	1    4900 5000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 4650 4000 4850
+Wire Wire Line
+	4000 4850 4900 4850
+Wire Wire Line
+	4900 4650 4900 4850
+Connection ~ 4900 4850
+Text Label 3800 5150 0    50   ~ 0
+ROW2
+Wire Wire Line
+	3800 5150 4900 5150
+Wire Wire Line
+	4000 4250 4000 3900
+Wire Wire Line
+	4000 3900 4900 3900
+Wire Wire Line
+	4900 3900 4900 4250
+Connection ~ 4900 3900
+$Comp
+L HandheldGameSymbols:1825910-6 SW12
+U 1 1 5D811DE7
+P 4900 5600
+F 0 "SW12" V 4635 5150 50  0000 C CNN
+F 1 "1825910-6" V 4726 5150 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 4700 5600 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 4700 5600 50  0001 C CNN
+	1    4900 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D12
+U 1 1 5D811DEE
+P 4900 6350
+F 0 "D12" V 4946 6271 50  0000 R CNN
+F 1 "1N4148" V 4855 6271 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4900 6175 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 4900 6350 50  0001 C CNN
+	1    4900 6350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 6000 4000 6200
+Wire Wire Line
+	4000 6200 4900 6200
+Wire Wire Line
+	4900 6000 4900 6200
+Connection ~ 4900 6200
+Text Label 3800 6500 0    50   ~ 0
+ROW3
+Wire Wire Line
+	3800 6500 4900 6500
+Wire Wire Line
+	4000 5600 4000 5250
+Wire Wire Line
+	4000 5250 4900 5250
+Wire Wire Line
+	4900 5250 4900 5600
+Connection ~ 4900 5250
+Wire Wire Line
+	5300 1200 5300 2550
+Wire Wire Line
+	4900 1200 5300 1200
+Wire Wire Line
+	4900 2550 5300 2550
+Wire Wire Line
+	5300 3900 5300 2550
+Wire Wire Line
+	4900 3900 5300 3900
+Connection ~ 5300 2550
+Wire Wire Line
+	5300 3900 5300 5250
+Wire Wire Line
+	4900 5250 5300 5250
+Connection ~ 5300 3900
+$Comp
+L HandheldGameSymbols:1825910-6 SW13
+U 1 1 5D8157EE
+P 6450 1550
+F 0 "SW13" V 6185 1100 50  0000 C CNN
+F 1 "1825910-6" V 6276 1100 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 6250 1550 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 6250 1550 50  0001 C CNN
+	1    6450 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D13
+U 1 1 5D8157F5
+P 6450 2300
+F 0 "D13" V 6496 2221 50  0000 R CNN
+F 1 "1N4148" V 6405 2221 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6450 2125 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 6450 2300 50  0001 C CNN
+	1    6450 2300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 1950 5550 2150
+Wire Wire Line
+	5550 2150 6450 2150
+Wire Wire Line
+	6450 1950 6450 2150
+Connection ~ 6450 2150
+Text Label 5350 2450 0    50   ~ 0
+ROW0
+Wire Wire Line
+	5350 2450 6450 2450
+$Comp
+L Device:R R4
+U 1 1 5D815802
+P 6450 950
+F 0 "R4" H 6520 996 50  0000 L CNN
+F 1 "1.8k" H 6520 905 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6380 950 50  0001 C CNN
+F 3 "~" H 6450 950 50  0001 C CNN
+	1    6450 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0107
+U 1 1 5D815809
+P 6450 750
+F 0 "#PWR0107" H 6450 600 50  0001 C CNN
+F 1 "+3.3V" H 6465 923 50  0000 C CNN
+F 2 "" H 6450 750 50  0001 C CNN
+F 3 "" H 6450 750 50  0001 C CNN
+	1    6450 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 750  6450 800 
+Wire Wire Line
+	5550 1550 5550 1200
+Wire Wire Line
+	5550 1200 6450 1200
+Wire Wire Line
+	6450 1200 6450 1550
+Text Label 6800 1200 0    50   ~ 0
+COL3
+Wire Wire Line
+	6450 1200 6450 1100
+Connection ~ 6450 1200
+$Comp
+L HandheldGameSymbols:1825910-6 SW14
+U 1 1 5D815816
+P 6450 2900
+F 0 "SW14" V 6185 2450 50  0000 C CNN
+F 1 "1825910-6" V 6276 2450 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 6250 2900 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 6250 2900 50  0001 C CNN
+	1    6450 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D14
+U 1 1 5D81581D
+P 6450 3650
+F 0 "D14" V 6496 3571 50  0000 R CNN
+F 1 "1N4148" V 6405 3571 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6450 3475 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 6450 3650 50  0001 C CNN
+	1    6450 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 3300 5550 3500
+Wire Wire Line
+	5550 3500 6450 3500
+Wire Wire Line
+	6450 3300 6450 3500
+Connection ~ 6450 3500
+Text Label 5350 3800 0    50   ~ 0
+ROW1
+Wire Wire Line
+	5350 3800 6450 3800
+Wire Wire Line
+	5550 2900 5550 2550
+Wire Wire Line
+	5550 2550 6450 2550
+Wire Wire Line
+	6450 2550 6450 2900
+Connection ~ 6450 2550
+$Comp
+L HandheldGameSymbols:1825910-6 SW15
+U 1 1 5D81582E
+P 6450 4250
+F 0 "SW15" V 6185 3800 50  0000 C CNN
+F 1 "1825910-6" V 6276 3800 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 6250 4250 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 6250 4250 50  0001 C CNN
+	1    6450 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D15
+U 1 1 5D815835
+P 6450 5000
+F 0 "D15" V 6496 4921 50  0000 R CNN
+F 1 "1N4148" V 6405 4921 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6450 4825 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 6450 5000 50  0001 C CNN
+	1    6450 5000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 4650 5550 4850
+Wire Wire Line
+	5550 4850 6450 4850
+Wire Wire Line
+	6450 4650 6450 4850
+Connection ~ 6450 4850
+Text Label 5350 5150 0    50   ~ 0
+ROW2
+Wire Wire Line
+	5350 5150 6450 5150
+Wire Wire Line
+	5550 4250 5550 3900
+Wire Wire Line
+	5550 3900 6450 3900
+Wire Wire Line
+	6450 3900 6450 4250
+Connection ~ 6450 3900
+$Comp
+L HandheldGameSymbols:1825910-6 SW16
+U 1 1 5D815846
+P 6450 5600
+F 0 "SW16" V 6185 5150 50  0000 C CNN
+F 1 "1825910-6" V 6276 5150 50  0000 C CNN
+F 2 "HandheldGameFootprints:1825910-6" H 6250 5600 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1825910&DocType=Customer+Drawing&DocLang=English" H 6250 5600 50  0001 C CNN
+	1    6450 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D16
+U 1 1 5D81584D
+P 6450 6350
+F 0 "D16" V 6496 6271 50  0000 R CNN
+F 1 "1N4148" V 6405 6271 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6450 6175 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 6450 6350 50  0001 C CNN
+	1    6450 6350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 6000 5550 6200
+Wire Wire Line
+	5550 6200 6450 6200
+Wire Wire Line
+	6450 6000 6450 6200
+Connection ~ 6450 6200
+Text Label 5350 6500 0    50   ~ 0
+ROW3
+Wire Wire Line
+	5350 6500 6450 6500
+Wire Wire Line
+	5550 5600 5550 5250
+Wire Wire Line
+	5550 5250 6450 5250
+Wire Wire Line
+	6450 5250 6450 5600
+Connection ~ 6450 5250
+Wire Wire Line
+	6850 1200 6850 2550
+Wire Wire Line
+	6450 1200 6850 1200
+Wire Wire Line
+	6450 2550 6850 2550
+Wire Wire Line
+	6850 3900 6850 2550
+Wire Wire Line
+	6450 3900 6850 3900
+Connection ~ 6850 2550
+Wire Wire Line
+	6850 3900 6850 5250
+Wire Wire Line
+	6450 5250 6850 5250
+Connection ~ 6850 3900
+$Comp
+L 74xx:74HC595 U2
+U 1 1 5D81BB9B
+P 7750 4000
+F 0 "U2" H 7500 4550 50  0000 C CNN
+F 1 "74HC595" H 8000 3350 50  0000 C CNN
+F 2 "Housings_DIP:DIP-16_W7.62mm" H 7750 4000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 7750 4000 50  0001 C CNN
+	1    7750 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC595 U3
+U 1 1 5D81BD2D
+P 9400 5450
+F 0 "U3" H 9150 6000 50  0000 C CNN
+F 1 "74HC595" H 9650 4800 50  0000 C CNN
+F 2 "Housings_DIP:DIP-16_W7.62mm" H 9400 5450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 9400 5450 50  0001 C CNN
+	1    9400 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR01
+U 1 1 5D821A6A
+P 7750 3300
+F 0 "#PWR01" H 7750 3150 50  0001 C CNN
+F 1 "+3.3V" H 7765 3473 50  0000 C CNN
+F 2 "" H 7750 3300 50  0001 C CNN
+F 3 "" H 7750 3300 50  0001 C CNN
+	1    7750 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR03
+U 1 1 5D82DA96
+P 9400 4750
+F 0 "#PWR03" H 9400 4600 50  0001 C CNN
+F 1 "+3.3V" H 9415 4923 50  0000 C CNN
+F 2 "" H 9400 4750 50  0001 C CNN
+F 3 "" H 9400 4750 50  0001 C CNN
+	1    9400 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3300 7750 3400
+Wire Wire Line
+	9400 4750 9400 4800
+$Comp
+L power:GND #PWR02
+U 1 1 5D83F441
+P 7750 4800
+F 0 "#PWR02" H 7750 4550 50  0001 C CNN
+F 1 "GND" H 7755 4627 50  0000 C CNN
+F 2 "" H 7750 4800 50  0001 C CNN
+F 3 "" H 7750 4800 50  0001 C CNN
+	1    7750 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5D83F4DF
+P 9400 6250
+F 0 "#PWR04" H 9400 6000 50  0001 C CNN
+F 1 "GND" H 9405 6077 50  0000 C CNN
+F 2 "" H 9400 6250 50  0001 C CNN
+F 3 "" H 9400 6250 50  0001 C CNN
+	1    9400 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 4700 7750 4800
+Wire Wire Line
+	9400 6150 9400 6250
+$Comp
+L Device:R R5
+U 1 1 5D84B832
+P 8350 3600
+F 0 "R5" V 8400 3450 50  0000 C CNN
+F 1 "330" V 8350 3600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8280 3600 50  0001 C CNN
+F 3 "~" H 8350 3600 50  0001 C CNN
+	1    8350 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED1
+U 1 1 5D851F8D
+P 8750 3600
+F 0 "LED1" H 8850 3550 50  0000 C CNN
+F 1 "LED" H 8750 3600 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 8750 3600 50  0001 C CNN
+F 3 "~" H 8750 3600 50  0001 C CNN
+	1    8750 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8150 3600 8200 3600
+Wire Wire Line
+	8500 3600 8600 3600
+$Comp
+L Device:R R6
+U 1 1 5D85E7DA
+P 8350 3700
+F 0 "R6" V 8400 3550 50  0000 C CNN
+F 1 "330" V 8350 3700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8280 3700 50  0001 C CNN
+F 3 "~" H 8350 3700 50  0001 C CNN
+	1    8350 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED2
+U 1 1 5D85E7E1
+P 8750 3700
+F 0 "LED2" H 8850 3650 50  0000 C CNN
+F 1 "LED" H 8750 3700 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 8750 3700 50  0001 C CNN
+F 3 "~" H 8750 3700 50  0001 C CNN
+	1    8750 3700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8150 3700 8200 3700
+Wire Wire Line
+	8500 3700 8600 3700
+$Comp
+L Device:R R7
+U 1 1 5D864CB1
+P 8350 3800
+F 0 "R7" V 8400 3650 50  0000 C CNN
+F 1 "330" V 8350 3800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8280 3800 50  0001 C CNN
+F 3 "~" H 8350 3800 50  0001 C CNN
+	1    8350 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED3
+U 1 1 5D864CB8
+P 8750 3800
+F 0 "LED3" H 8850 3750 50  0000 C CNN
+F 1 "LED" H 8750 3800 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 8750 3800 50  0001 C CNN
+F 3 "~" H 8750 3800 50  0001 C CNN
+	1    8750 3800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8150 3800 8200 3800
+Wire Wire Line
+	8500 3800 8600 3800
+$Comp
+L Device:R R8
+U 1 1 5D86B383
+P 8350 3900
+F 0 "R8" V 8400 3750 50  0000 C CNN
+F 1 "330" V 8350 3900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8280 3900 50  0001 C CNN
+F 3 "~" H 8350 3900 50  0001 C CNN
+	1    8350 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED4
+U 1 1 5D86B38A
+P 8750 3900
+F 0 "LED4" H 8850 3850 50  0000 C CNN
+F 1 "LED" H 8750 3900 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 8750 3900 50  0001 C CNN
+F 3 "~" H 8750 3900 50  0001 C CNN
+	1    8750 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8150 3900 8200 3900
+Wire Wire Line
+	8500 3900 8600 3900
+$Comp
+L Device:R R9
+U 1 1 5D871C5F
+P 8350 4000
+F 0 "R9" V 8400 3850 50  0000 C CNN
+F 1 "330" V 8350 4000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8280 4000 50  0001 C CNN
+F 3 "~" H 8350 4000 50  0001 C CNN
+	1    8350 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED5
+U 1 1 5D871C66
+P 8750 4000
+F 0 "LED5" H 8850 3950 50  0000 C CNN
+F 1 "LED" H 8750 4000 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 8750 4000 50  0001 C CNN
+F 3 "~" H 8750 4000 50  0001 C CNN
+	1    8750 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8150 4000 8200 4000
+Wire Wire Line
+	8500 4000 8600 4000
+$Comp
+L Device:R R10
+U 1 1 5D878754
+P 8350 4100
+F 0 "R10" V 8400 3950 50  0000 C CNN
+F 1 "330" V 8350 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8280 4100 50  0001 C CNN
+F 3 "~" H 8350 4100 50  0001 C CNN
+	1    8350 4100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED6
+U 1 1 5D87875B
+P 8750 4100
+F 0 "LED6" H 8850 4050 50  0000 C CNN
+F 1 "LED" H 8750 4100 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 8750 4100 50  0001 C CNN
+F 3 "~" H 8750 4100 50  0001 C CNN
+	1    8750 4100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8150 4100 8200 4100
+Wire Wire Line
+	8500 4100 8600 4100
+$Comp
+L Device:R R11
+U 1 1 5D87F475
+P 8350 4200
+F 0 "R11" V 8400 4050 50  0000 C CNN
+F 1 "330" V 8350 4200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8280 4200 50  0001 C CNN
+F 3 "~" H 8350 4200 50  0001 C CNN
+	1    8350 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED7
+U 1 1 5D87F47C
+P 8750 4200
+F 0 "LED7" H 8850 4150 50  0000 C CNN
+F 1 "LED" H 8750 4200 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 8750 4200 50  0001 C CNN
+F 3 "~" H 8750 4200 50  0001 C CNN
+	1    8750 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8150 4200 8200 4200
+Wire Wire Line
+	8500 4200 8600 4200
+$Comp
+L Device:R R12
+U 1 1 5D8863C9
+P 8350 4300
+F 0 "R12" V 8400 4150 50  0000 C CNN
+F 1 "330" V 8350 4300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8280 4300 50  0001 C CNN
+F 3 "~" H 8350 4300 50  0001 C CNN
+	1    8350 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED8
+U 1 1 5D8863D0
+P 8750 4300
+F 0 "LED8" H 8850 4250 50  0000 C CNN
+F 1 "LED" H 8750 4300 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 8750 4300 50  0001 C CNN
+F 3 "~" H 8750 4300 50  0001 C CNN
+	1    8750 4300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8150 4300 8200 4300
+Wire Wire Line
+	8500 4300 8600 4300
+$Comp
+L Device:R R13
+U 1 1 5D88D5EB
+P 10000 5050
+F 0 "R13" V 10050 4900 50  0000 C CNN
+F 1 "330" V 10000 5050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9930 5050 50  0001 C CNN
+F 3 "~" H 10000 5050 50  0001 C CNN
+	1    10000 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED9
+U 1 1 5D88D5F2
+P 10400 5050
+F 0 "LED9" H 10500 5000 50  0000 C CNN
+F 1 "LED" H 10400 5050 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 10400 5050 50  0001 C CNN
+F 3 "~" H 10400 5050 50  0001 C CNN
+	1    10400 5050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9800 5050 9850 5050
+Wire Wire Line
+	10150 5050 10250 5050
+$Comp
+L Device:R R14
+U 1 1 5D8949AC
+P 10000 5150
+F 0 "R14" V 10050 5000 50  0000 C CNN
+F 1 "330" V 10000 5150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9930 5150 50  0001 C CNN
+F 3 "~" H 10000 5150 50  0001 C CNN
+	1    10000 5150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED10
+U 1 1 5D8949B3
+P 10400 5150
+F 0 "LED10" H 10500 5100 50  0000 C CNN
+F 1 "LED" H 10400 5150 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 10400 5150 50  0001 C CNN
+F 3 "~" H 10400 5150 50  0001 C CNN
+	1    10400 5150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9800 5150 9850 5150
+Wire Wire Line
+	10150 5150 10250 5150
+$Comp
+L Device:R R15
+U 1 1 5D89BFA3
+P 10000 5250
+F 0 "R15" V 10050 5100 50  0000 C CNN
+F 1 "330" V 10000 5250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9930 5250 50  0001 C CNN
+F 3 "~" H 10000 5250 50  0001 C CNN
+	1    10000 5250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED11
+U 1 1 5D89BFAA
+P 10400 5250
+F 0 "LED11" H 10500 5200 50  0000 C CNN
+F 1 "LED" H 10400 5250 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 10400 5250 50  0001 C CNN
+F 3 "~" H 10400 5250 50  0001 C CNN
+	1    10400 5250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9800 5250 9850 5250
+Wire Wire Line
+	10150 5250 10250 5250
+$Comp
+L Device:R R16
+U 1 1 5D8A37DF
+P 10000 5350
+F 0 "R16" V 10050 5200 50  0000 C CNN
+F 1 "330" V 10000 5350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9930 5350 50  0001 C CNN
+F 3 "~" H 10000 5350 50  0001 C CNN
+	1    10000 5350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED12
+U 1 1 5D8A37E6
+P 10400 5350
+F 0 "LED12" H 10500 5300 50  0000 C CNN
+F 1 "LED" H 10400 5350 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 10400 5350 50  0001 C CNN
+F 3 "~" H 10400 5350 50  0001 C CNN
+	1    10400 5350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9800 5350 9850 5350
+Wire Wire Line
+	10150 5350 10250 5350
+$Comp
+L Device:R R17
+U 1 1 5D8AB26F
+P 10000 5450
+F 0 "R17" V 10050 5300 50  0000 C CNN
+F 1 "330" V 10000 5450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9930 5450 50  0001 C CNN
+F 3 "~" H 10000 5450 50  0001 C CNN
+	1    10000 5450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED13
+U 1 1 5D8AB276
+P 10400 5450
+F 0 "LED13" H 10500 5400 50  0000 C CNN
+F 1 "LED" H 10400 5450 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 10400 5450 50  0001 C CNN
+F 3 "~" H 10400 5450 50  0001 C CNN
+	1    10400 5450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9800 5450 9850 5450
+Wire Wire Line
+	10150 5450 10250 5450
+$Comp
+L Device:R R18
+U 1 1 5D8B2F62
+P 10000 5550
+F 0 "R18" V 10050 5400 50  0000 C CNN
+F 1 "330" V 10000 5550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9930 5550 50  0001 C CNN
+F 3 "~" H 10000 5550 50  0001 C CNN
+	1    10000 5550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED14
+U 1 1 5D8B2F69
+P 10400 5550
+F 0 "LED14" H 10500 5500 50  0000 C CNN
+F 1 "LED" H 10400 5550 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 10400 5550 50  0001 C CNN
+F 3 "~" H 10400 5550 50  0001 C CNN
+	1    10400 5550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9800 5550 9850 5550
+Wire Wire Line
+	10150 5550 10250 5550
+$Comp
+L Device:R R19
+U 1 1 5D8BAEC7
+P 10000 5650
+F 0 "R19" V 10050 5500 50  0000 C CNN
+F 1 "330" V 10000 5650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9930 5650 50  0001 C CNN
+F 3 "~" H 10000 5650 50  0001 C CNN
+	1    10000 5650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED15
+U 1 1 5D8BAECE
+P 10400 5650
+F 0 "LED15" H 10500 5600 50  0000 C CNN
+F 1 "LED" H 10400 5650 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 10400 5650 50  0001 C CNN
+F 3 "~" H 10400 5650 50  0001 C CNN
+	1    10400 5650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9800 5650 9850 5650
+Wire Wire Line
+	10150 5650 10250 5650
+$Comp
+L Device:R R20
+U 1 1 5D8C30B1
+P 10000 5750
+F 0 "R20" V 10050 5600 50  0000 C CNN
+F 1 "330" V 10000 5750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9930 5750 50  0001 C CNN
+F 3 "~" H 10000 5750 50  0001 C CNN
+	1    10000 5750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED16
+U 1 1 5D8C30B8
+P 10400 5750
+F 0 "LED16" H 10500 5700 50  0000 C CNN
+F 1 "LED" H 10400 5750 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 10400 5750 50  0001 C CNN
+F 3 "~" H 10400 5750 50  0001 C CNN
+	1    10400 5750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9800 5750 9850 5750
+Wire Wire Line
+	10150 5750 10250 5750
+$Comp
+L power:GND #PWR07
+U 1 1 5D8CBF3B
+P 8900 4450
+F 0 "#PWR07" H 8900 4200 50  0001 C CNN
+F 1 "GND" H 8905 4277 50  0000 C CNN
+F 2 "" H 8900 4450 50  0001 C CNN
+F 3 "" H 8900 4450 50  0001 C CNN
+	1    8900 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 4450 8900 4300
+Connection ~ 8900 3700
+Wire Wire Line
+	8900 3700 8900 3600
+Connection ~ 8900 3800
+Wire Wire Line
+	8900 3800 8900 3700
+Connection ~ 8900 3900
+Wire Wire Line
+	8900 3900 8900 3800
+Connection ~ 8900 4000
+Wire Wire Line
+	8900 4000 8900 3900
+Connection ~ 8900 4100
+Wire Wire Line
+	8900 4100 8900 4000
+Connection ~ 8900 4200
+Wire Wire Line
+	8900 4200 8900 4100
+Connection ~ 8900 4300
+Wire Wire Line
+	8900 4300 8900 4200
+$Comp
+L power:GND #PWR010
+U 1 1 5D8D45D3
+P 10550 5900
+F 0 "#PWR010" H 10550 5650 50  0001 C CNN
+F 1 "GND" H 10555 5727 50  0000 C CNN
+F 2 "" H 10550 5900 50  0001 C CNN
+F 3 "" H 10550 5900 50  0001 C CNN
+	1    10550 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10550 5900 10550 5750
+Connection ~ 10550 5150
+Wire Wire Line
+	10550 5150 10550 5050
+Connection ~ 10550 5250
+Wire Wire Line
+	10550 5250 10550 5150
+Connection ~ 10550 5350
+Wire Wire Line
+	10550 5350 10550 5250
+Connection ~ 10550 5450
+Wire Wire Line
+	10550 5450 10550 5350
+Connection ~ 10550 5550
+Wire Wire Line
+	10550 5550 10550 5450
+Connection ~ 10550 5650
+Wire Wire Line
+	10550 5650 10550 5550
+Connection ~ 10550 5750
+Wire Wire Line
+	10550 5750 10550 5650
+Text Label 7000 3600 0    50   ~ 0
+DATA
+Text Label 7000 3800 0    50   ~ 0
+CLOCK
+Text Label 7000 4100 0    50   ~ 0
+LATCH
+Wire Wire Line
+	7000 3600 7350 3600
+Wire Wire Line
+	7000 3800 7350 3800
+Wire Wire Line
+	7000 4100 7350 4100
+Wire Wire Line
+	7350 3900 7300 3900
+Wire Wire Line
+	7300 3900 7300 3300
+Wire Wire Line
+	7300 3300 7750 3300
+Connection ~ 7750 3300
+Wire Wire Line
+	7350 4200 7250 4200
+Wire Wire Line
+	7250 4200 7250 4700
+Wire Wire Line
+	7250 4700 7750 4700
+Connection ~ 7750 4700
+Wire Wire Line
+	8150 4500 8500 4500
+Wire Wire Line
+	8500 4500 8500 5050
+Wire Wire Line
+	8500 5050 9000 5050
+Text Label 8650 5250 0    50   ~ 0
+CLOCK
+Text Label 8650 5550 0    50   ~ 0
+LATCH
+Wire Wire Line
+	8650 5250 9000 5250
+Wire Wire Line
+	8650 5550 9000 5550
+Wire Wire Line
+	9000 5650 8900 5650
+Wire Wire Line
+	8900 5650 8900 6150
+Wire Wire Line
+	8900 6150 9400 6150
+Connection ~ 9400 6150
+Wire Wire Line
+	9000 5350 8900 5350
+Wire Wire Line
+	8900 5350 8900 4800
+Wire Wire Line
+	8900 4800 9400 4800
+Connection ~ 9400 4800
+Wire Wire Line
+	9400 4800 9400 4850
+$Comp
+L Jumper:SolderJumper_3_Open JP1
+U 1 1 5D972F0F
+P 7600 2400
+F 0 "JP1" V 7646 2468 50  0000 L CNN
+F 1 "SolderJumper_3_Open" V 7555 2468 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels" H 7600 2400 50  0001 C CNN
+F 3 "~" H 7600 2400 50  0001 C CNN
+	1    7600 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Open JP2
+U 1 1 5D97316B
+P 8000 2500
+F 0 "JP2" V 8046 2568 50  0000 L CNN
+F 1 "SolderJumper_3_Open" V 8050 1600 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels" H 8000 2500 50  0001 C CNN
+F 3 "~" H 8000 2500 50  0001 C CNN
+	1    8000 2500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8950 2500 8150 2500
+Wire Wire Line
+	8950 2400 7750 2400
+$Comp
+L power:+3.3V #PWR05
+U 1 1 5D9969D3
+P 7600 2100
+F 0 "#PWR05" H 7600 1950 50  0001 C CNN
+F 1 "+3.3V" H 7615 2273 50  0000 C CNN
+F 2 "" H 7600 2100 50  0001 C CNN
+F 3 "" H 7600 2100 50  0001 C CNN
+	1    7600 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 2100 7600 2150
+Wire Wire Line
+	7600 2150 8000 2150
+Wire Wire Line
+	8000 2150 8000 2300
+Connection ~ 7600 2150
+Wire Wire Line
+	7600 2150 7600 2200
+$Comp
+L power:GND #PWR06
+U 1 1 5D9AF02A
+P 7600 2750
+F 0 "#PWR06" H 7600 2500 50  0001 C CNN
+F 1 "GND" H 7605 2577 50  0000 C CNN
+F 2 "" H 7600 2750 50  0001 C CNN
+F 3 "" H 7600 2750 50  0001 C CNN
+	1    7600 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 2750 8000 2750
+Wire Wire Line
+	8000 2750 8000 2700
+Wire Wire Line
+	7600 2600 7600 2750
+Connection ~ 7600 2750
+Wire Wire Line
+	8950 2200 8350 2200
+Wire Wire Line
+	8350 2200 8350 2600
+Connection ~ 8350 2600
+Text Label 10400 1500 0    50   ~ 0
+COL1
+Text Label 10400 1600 0    50   ~ 0
+COL2
+Text Label 10400 1700 0    50   ~ 0
+COL3
+Text Label 10400 2100 0    50   ~ 0
+ROW1
+Text Label 10400 2200 0    50   ~ 0
+ROW2
+Text Label 10400 2300 0    50   ~ 0
+ROW3
+Wire Wire Line
+	10350 2100 10400 2100
+Wire Wire Line
+	10400 2200 10350 2200
+Wire Wire Line
+	10350 2300 10400 2300
+Wire Wire Line
+	10400 1700 10350 1700
+Wire Wire Line
+	10350 1600 10400 1600
+Wire Wire Line
+	10350 1500 10400 1500
+Text Label 10400 2000 0    50   ~ 0
+ROW0
+Text Label 10400 1400 0    50   ~ 0
+COL0
+Wire Wire Line
+	10400 1400 10350 1400
+Wire Wire Line
+	10350 2000 10400 2000
+Text Label 10400 2400 0    50   ~ 0
+DATA
+Text Label 10400 2500 0    50   ~ 0
+CLOCK
+Wire Wire Line
+	10400 2400 10350 2400
+Wire Wire Line
+	10350 2500 10400 2500
+Text Label 10400 1300 0    50   ~ 0
+LATCH
+Wire Wire Line
+	10400 1300 10350 1300
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5DADA869
+P 8600 2800
+F 0 "J1" H 8700 2700 50  0000 C CNN
+F 1 "Conn_01x02" H 8450 2900 50  0000 C CNN
+F 2 "Wire_Connections_Bridges:WireConnection_2.00mmDrill" H 8600 2800 50  0001 C CNN
+F 3 "~" H 8600 2800 50  0001 C CNN
+	1    8600 2800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8800 2700 8950 2700
+Wire Wire Line
+	8800 2800 9050 2800
+Wire Wire Line
+	9050 2800 9050 3100
+Connection ~ 9050 3100
+Wire Wire Line
+	9050 3100 9650 3100
+$Comp
+L Device:C C1
+U 1 1 5DAF7F13
+P 9900 3850
+F 0 "C1" H 10015 3896 50  0000 L CNN
+F 1 "100n" H 10015 3805 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 9938 3700 50  0001 C CNN
+F 3 "~" H 9900 3850 50  0001 C CNN
+	1    9900 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5DAF802C
+P 9900 4150
+F 0 "#PWR09" H 9900 3900 50  0001 C CNN
+F 1 "GND" H 9905 3977 50  0000 C CNN
+F 2 "" H 9900 4150 50  0001 C CNN
+F 3 "" H 9900 4150 50  0001 C CNN
+	1    9900 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR08
+U 1 1 5DAF813D
+P 9900 3600
+F 0 "#PWR08" H 9900 3450 50  0001 C CNN
+F 1 "+3.3V" H 9915 3773 50  0000 C CNN
+F 2 "" H 9900 3600 50  0001 C CNN
+F 3 "" H 9900 3600 50  0001 C CNN
+	1    9900 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 3600 9900 3700
+Wire Wire Line
+	9900 4000 9900 4100
+$Comp
+L Device:C C2
+U 1 1 5DB2478F
+P 10450 3850
+F 0 "C2" H 10565 3896 50  0000 L CNN
+F 1 "100n" H 10565 3805 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 10488 3700 50  0001 C CNN
+F 3 "~" H 10450 3850 50  0001 C CNN
+	1    10450 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10450 3600 10450 3700
+Wire Wire Line
+	9900 3600 10450 3600
+Connection ~ 9900 3600
+Wire Wire Line
+	10450 4000 10450 4100
+Wire Wire Line
+	10450 4100 9900 4100
+Connection ~ 9900 4100
+Wire Wire Line
+	9900 4100 9900 4150
+NoConn ~ 8950 1300
+NoConn ~ 8950 1400
+NoConn ~ 8950 1500
+NoConn ~ 8950 1600
+NoConn ~ 8950 1700
+NoConn ~ 8950 1800
+NoConn ~ 8950 1900
+NoConn ~ 8950 2000
+NoConn ~ 8950 2100
+NoConn ~ 9800 5950
+$EndSCHEMATC
