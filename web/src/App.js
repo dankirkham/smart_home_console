@@ -67,10 +67,15 @@ const LightSwitch = ({light, state}) => {
   const {name, id} = light;
 
   const toggle = () => {
-    superagent.post('/api/switches/set', {
-      id,
-      state: state === "on" ? "off" : "on"
-    });
+    const newState = state === "on" ? "off" : "on";
+    console.log("Turning " + name + " " + newState);
+    superagent
+      .post(`/api/switches/set`)
+      .send({
+        id,
+        state: newState
+      })
+      .then(() => undefined);
   };
 
   return <Container fixed>
@@ -83,26 +88,31 @@ export default () => {
   const [switchStates, setSwitchStates] = React.useState({});
 
   useInterval(() => {
-    superagent.get('/api/switches/list')
-      .then(switches => {
+    superagent.get("/api/switches/list")
+      .then(({body: switches}) => {
         if (!switches || !Array.isArray(switches)) return;
 
         const newState = {};
         switches.map(s => {
-          newState[s.id] = s.state;
+          newState[s.id] = s.value;
         });
 
         setSwitchStates(newState);
-      })
+      });
   }, 1000);
 
   const turnOffAllLights = () => {
+    console.log('Turning all lights off');
     for (let id in switchStates) {
       if (switchStates[id] === "on") {
-        superagent.post('/api/switches/set', {
-          id,
-          state: "off"
-        });
+        console.log("Turning " + id + " off.");
+        superagent
+          .post("/api/switches/set")
+          .send({
+            id,
+            state: "off"
+          })
+          .then(() => undefined);
       }
     }
   };
