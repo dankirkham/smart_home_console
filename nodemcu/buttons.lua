@@ -12,13 +12,14 @@ PIN_ROW2 = 7 -- GPIO13
 PIN_ROW3 = 8 -- GPIO15
 
 local debounce_timers = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+local pressed = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 function select_row(row)
     gpio.write(PIN_ROW0, gpio.HIGH)
     gpio.write(PIN_ROW1, gpio.HIGH)
     gpio.write(PIN_ROW2, gpio.HIGH)
     gpio.write(PIN_ROW3, gpio.HIGH)
-    
+
     if row == 0 then
         gpio.write(PIN_ROW0, gpio.LOW)
     elseif row == 1 then
@@ -59,12 +60,12 @@ function lib.read_buttons()
         buttons[5],
         buttons[9],
         buttons[13],
-        
+
         buttons[2],
         buttons[6],
         buttons[10],
         buttons[14],
-        
+
         buttons[3],
         buttons[7],
         buttons[11],
@@ -73,18 +74,33 @@ function lib.read_buttons()
         buttons[4],
         buttons[8],
         buttons[12],
-        buttons[16],
+        buttons[16]
     }
 
     -- Check for debounce
-    local debounced_buttons = {}
+    local posedge_buttons = {}
     for i = 1, 16 do
-        debounced_buttons[i] = false
+        posedge_buttons[i] = false
 
-        -- Check for press
-        if buttons[i] and debounce_timers[i] == 0 then -- Button is pressed and not debounced
-            debounced_buttons[i] = true
-            debounce_timers[i] = 20
+        -- Check for positive edge
+        if (
+          (not pressed[i]) and -- Not in press state
+          buttons[i] and -- Physically pressed
+          debounce_timers[i] == 0 -- Not debouncing
+        ) then
+            pressed[i] = true;
+            posedge_buttons[i] = true -- Save posedge
+            debounce_timers[i] = 3
+        end
+
+        -- Check for negative edge
+        if (
+          pressed[i] and -- In press state
+          (not buttons[i]) and -- Not physically pressed
+          debounce_timers[i] == 0 -- Not debouncing
+        ) then
+            pressed[i] = false;
+            debounce_timers[i] = 3
         end
 
         -- Tick debounce timers
@@ -93,7 +109,8 @@ function lib.read_buttons()
         end
     end
 
-    return debounced_buttons
+    -- Return posedge
+    return posedge_buttons
 end
 
 return lib
