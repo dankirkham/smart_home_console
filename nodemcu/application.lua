@@ -1,81 +1,47 @@
 local light_control = require("light_control")
 local buttons = require("buttons")
-local http = require("http")
-local sjson = require("sjson")
+local mqtt = require("mqtt")
+
+local switch_state = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false}
 
 function on_post_done()
     local timer = tmr.create()
-    local switch_state = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false}
 
     function do_buttons()
         buttons_pressed = buttons.read_buttons()
-
         for i = 1, 16 do
             if buttons_pressed[i] then
-                local data
+                local payload
                 if switch_state[i] then
-                    print('Turning off ' ..  ID_MAP[i])
-                    data = '{"id":"' .. ID_MAP[i] .. '","state":"off"}'
+                    print('Turning off ' ..  i)
+                    payload = "OFF"
                 else
-                    print('Turning on ' ..  ID_MAP[i])
-                    data = '{"id":"' .. ID_MAP[i] .. '","state":"on"}'
+                    print('Turning on ' ..  i)
+                    payload = "ON"
                 end
-                http.post(API_ENDPOINT .. "/switches/set",
-                  'Content-Type: application/json\r\n',
-                  data,
-                  function(code, data)
-                    if (code < 0) then
-                      print("HTTP request failed")
-                    else
-                      print(code, data)
-                    end
-                  end)
+
+                m:publish(MQTT_TOPIC .. "/button" .. i .. "/press", payload, 0, 1)
+
+                switch_state[i] = not switch_state[i]
+                light_control.set_lights(switch_state)
             end
         end
     end
 
-    function query_switches()
-      headers = "Authorization: Bearer " .. API_TOKEN .. "\r\n"
-      http.get(API_ENDPOINT .. "/switches/list", headers, function (code, data)
-        if code == 200 then
-          switches = sjson.decode(data)
-          local changed = false
-
-          for i = 1, #switches do
-            local id = switches[i]['id']
-            local switch = SWITCH_MAP[id]
-            local newstate = (switches[i]['value'] == 'on')
-
-            if switch_state[switch] ~= newstate then
-              if newstate then
-                print(id .. " is now on")
-              else
-                print(id .. " is now off")
-              end
-              switch_state[switch] = newstate
-              changed = true
-            end
-          end
-
-          if changed then
-              light_control.set_lights(switch_state)
-          end
-        end
-      end)
-
+    function do_available()
+      m:publish(MQTT_TOPIC .. "/availability", "online", 0, 1)
     end
 
     -- init
-    switch_state = buttons.read_buttons()
     light_control.set_lights(switch_state)
 
     local button_timer = tmr.create()
     button_timer:register(20, tmr.ALARM_AUTO, do_buttons)
     button_timer:start()
 
-    local query_timer = tmr.create()
-    query_timer:register(1000, tmr.ALARM_AUTO, query_switches)
-    query_timer:start()
+    local availability_timer = tmr.create()
+    availability_timer:register(1000, tmr.ALARM_AUTO, do_available)
+    availability_timer:start()
 end
 
 function post()
@@ -102,4 +68,23 @@ end
 
 light_control.init_lights()
 buttons.init_buttons()
-post()
+
+function handle_message(client, topic, message)
+  local switch_number = tonumber(string.match(topic, "%d+"))
+  switch_state[switch_number] = message == "ON"
+  m:publish(MQTT_TOPIC .. "/button" .. switch_number .. "/press", message, 0, 1)
+  light_control.set_lights(switch_state)
+end
+
+function mqtt_connected()
+  print("Connected to MQTT");
+  m:on("message", handle_message)
+  for i = 1, 16 do
+    local topic = MQTT_TOPIC .. "/button" .. i .. "/set"
+    m:subscribe(topic, 0)
+  end
+  post()
+end
+
+m = mqtt.Client(MQTT_CLIENT_ID, MQTT_KEEPALIVE)
+m:connect(MQTT_HOST, MQTT_PORT, mqtt_connected)
