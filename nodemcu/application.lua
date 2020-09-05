@@ -4,35 +4,34 @@ local mqtt = require("mqtt")
 
 local switch_state = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false}
 
+function do_buttons()
+    buttons_pressed = buttons.read_buttons()
+    for i = 1, 16 do
+        if buttons_pressed[i] then
+            local payload
+            if switch_state[i] then
+                print('Turning off ' ..  i)
+                payload = "OFF"
+            else
+                print('Turning on ' ..  i)
+                payload = "ON"
+            end
+
+            m:publish(MQTT_TOPIC .. "/button" .. i .. "/state", payload, 0, 0)
+
+            switch_state[i] = not switch_state[i]
+            light_control.set_lights(switch_state)
+        end
+    end
+end
+
+function do_available()
+  m:publish(MQTT_TOPIC .. "/availability", "online", 0, 0)
+end
+
 function on_post_done()
     local timer = tmr.create()
 
-    function do_buttons()
-        buttons_pressed = buttons.read_buttons()
-        for i = 1, 16 do
-            if buttons_pressed[i] then
-                local payload
-                if switch_state[i] then
-                    print('Turning off ' ..  i)
-                    payload = "OFF"
-                else
-                    print('Turning on ' ..  i)
-                    payload = "ON"
-                end
-
-                m:publish(MQTT_TOPIC .. "/button" .. i .. "/press", payload, 0, 1)
-
-                switch_state[i] = not switch_state[i]
-                light_control.set_lights(switch_state)
-            end
-        end
-    end
-
-    function do_available()
-      m:publish(MQTT_TOPIC .. "/availability", "online", 0, 1)
-    end
-
-    -- init
     light_control.set_lights(switch_state)
 
     local button_timer = tmr.create()
@@ -72,7 +71,7 @@ buttons.init_buttons()
 function handle_message(client, topic, message)
   local switch_number = tonumber(string.match(topic, "%d+"))
   switch_state[switch_number] = message == "ON"
-  m:publish(MQTT_TOPIC .. "/button" .. switch_number .. "/press", message, 0, 1)
+  m:publish(MQTT_TOPIC .. "/button" .. switch_number .. "/state", message, 0, 0)
   light_control.set_lights(switch_state)
 end
 
